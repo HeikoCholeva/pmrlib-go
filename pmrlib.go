@@ -63,6 +63,7 @@ func (r *Report) FromJSON(data []byte) error {
 	r.Packages = make([]Package, 0)
 	r.Updates = make([]Update, 0)
 	r.Repositories = make([]string, 0)
+	r.Errors = make([]Error, 0)
 
 	for i := range rep.MAC {
 		if len(rep.MAC) <= 0 {
