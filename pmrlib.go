@@ -110,6 +110,7 @@ func (r *Report) FromJSON(data []byte) error {
 		var rerr Error
 		rerr.Code = rep.Errors[i].Code
 		rerr.Message = rep.Errors[i].Message
+		r.Errors = append(r.Errors, rerr)
 	}
 
 	for i := range rep.Repositories {
